@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["bench"]
+
+[project]
+name = "sql-vs-nosql-benchmark"
+version = "1.0.0"
+description = "PostgreSQL x MongoDB com os mesmos eventos de jogo: mesmas consultas, mesma resposta, tempos medidos"
+requires-python = ">=3.11"
+dependencies = ["psycopg[binary]>=3.2", "pymongo>=4.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
