@@ -1,0 +1,80 @@
+{
+  "events": 300000,
+  "players": 2000,
+  "reps": 5,
+  "queries": [
+    {
+      "key": "history",
+      "title": "histórico de um jogador (50 últimos)",
+      "postgres_ms": 4.0,
+      "mongodb_ms": 3.6,
+      "rows": 50,
+      "same_result": true
+    },
+    {
+      "key": "weapons",
+      "title": "kills por arma (GROUP BY)",
+      "postgres_ms": 64.7,
+      "mongodb_ms": 516.0,
+      "rows": 7,
+      "same_result": true
+    },
+    {
+      "key": "deaths_by_hour",
+      "title": "mortes por hora do dia",
+      "postgres_ms": 52.6,
+      "mongodb_ms": 67.1,
+      "rows": 24,
+      "same_result": true
+    },
+    {
+      "key": "heatmap",
+      "title": "mapa de calor (grade de 512 m)",
+      "postgres_ms": 55.9,
+      "mongodb_ms": 676.7,
+      "rows": 375,
+      "same_result": true
+    },
+    {
+      "key": "sessions",
+      "title": "sessões por jogador (função de janela)",
+      "postgres_ms": 655.5,
+      "mongodb_ms": 3375.4,
+      "rows": 2000,
+      "same_result": true
+    },
+    {
+      "key": "kd",
+      "title": "kills e mortes por jogador",
+      "postgres_ms": 115.4,
+      "mongodb_ms": 1340.9,
+      "rows": 2000,
+      "same_result": true
+    }
+  ],
+  "load": {
+    "postgres": 18.95,
+    "mongodb": 19.04
+  },
+  "rename": {
+    "postgres_ms": 15.06,
+    "postgres_rows": 1,
+    "mongodb_ms": 18.33,
+    "mongodb_docs": 228
+  },
+  "size": {
+    "postgres": {
+      "data": 28172288,
+      "indexes": 28262400
+    },
+    "mongodb": {
+      "data": 17121280,
+      "indexes": 15740928
+    }
+  },
+  "versions": {
+    "postgres": "18.6",
+    "mongodb": "8.0.38",
+    "python": "3.14.6"
+  }
+}
